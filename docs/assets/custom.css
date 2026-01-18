@@ -1,0 +1,144 @@
+/* DiveDeep Brand Theme Override for mkdocs-shadcn */
+
+:root {
+  /* Primary Ocean Waves palette */
+  --primary: 187 100% 47%; /* #00DCEF */
+  --primary-foreground: 190 97% 8%; /* dark text on primary */
+  
+  /* Accent Caribbean Waters */
+  --accent: 170 97% 48%; /* #05F2DB */
+  --accent-foreground: 190 97% 8%;
+  
+  /* Dark theme backgrounds */
+  --background: 190 97% 8%; /* #011F27 */
+  --foreground: 180 8% 97%; /* #F9FBFB */
+  
+  --card: 189 96% 11%; /* #012D37 */
+  --card-foreground: 180 8% 97%;
+  
+  --popover: 189 96% 11%;
+  --popover-foreground: 180 8% 97%;
+  
+  --muted: 188 56% 22%; /* #1F3537 */
+  --muted-foreground: 180 8% 67%; /* #9CADAF */
+  
+  --secondary: 187 100% 32%; /* #008BA1 */
+  --secondary-foreground: 180 8% 97%;
+  
+  --border: 186 14% 37%; /* #4B6163 */
+  --input: 186 14% 37%;
+  --ring: 187 100% 47%;
+  
+  /* Sidebar */
+  --sidebar-background: 190 97% 8%;
+  --sidebar-foreground: 180 8% 97%;
+  --sidebar-primary: 187 100% 47%;
+  --sidebar-primary-foreground: 190 97% 8%;
+  --sidebar-accent: 189 96% 11%;
+  --sidebar-accent-foreground: 180 8% 97%;
+  --sidebar-border: 186 14% 37%;
+  --sidebar-ring: 187 100% 47%;
+  
+  /* Status colors */
+  --destructive: 345 96% 60%; /* #F93A67 */
+  --destructive-foreground: 180 8% 97%;
+  
+  /* Code blocks */
+  --code-background: 189 96% 11%;
+  --code-foreground: 180 8% 97%;
+}
+
+/* Logo in header */
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 1.5rem;
+  width: auto;
+}
+
+/* Nav links */
+nav a:hover,
+.md-nav__link:hover {
+  color: hsl(var(--primary)) !important;
+}
+
+/* Active nav item */
+.md-nav__item--active > .md-nav__link {
+  color: hsl(var(--primary)) !important;
+}
+
+/* Links */
+a {
+  color: hsl(var(--primary));
+}
+
+a:hover {
+  color: hsl(var(--accent));
+}
+
+/* Code highlighting */
+code {
+  background: hsl(var(--card));
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+}
+
+pre code {
+  background: transparent;
+  padding: 0;
+}
+
+/* Admonitions */
+.admonition {
+  border-left-color: hsl(var(--primary)) !important;
+}
+
+.admonition.note {
+  border-left-color: hsl(var(--primary)) !important;
+}
+
+.admonition.warning {
+  border-left-color: hsl(37 95% 52%) !important; /* warning-500 */
+}
+
+.admonition.danger,
+.admonition.error {
+  border-left-color: hsl(var(--destructive)) !important;
+}
+
+.admonition.tip,
+.admonition.success {
+  border-left-color: hsl(122 50% 46%) !important; /* success-500 */
+}
+
+/* Table styling */
+table {
+  border-color: hsl(var(--border));
+}
+
+th {
+  background: hsl(var(--card));
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Selection */
+::selection {
+  background: hsla(187, 100%, 47%, 0.3);
+}
