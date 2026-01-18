@@ -6,7 +6,6 @@ theme:
   name: shadcn
   logo: assets/logo.svg
   favicon: assets/favicon.svg
-  custom_dir: overrides
 
 extra_css:
   - assets/custom.css
