@@ -66,23 +66,24 @@
   background-color: hsl(189 96% 11%) !important; /* #012D37 */
 }
 
-/* Make the logo bigger */
-.size-5 {
-  width: 2rem !important;
-  height: 2rem !important;
+/* Make the logo MUCH bigger */
+img[alt="icon"],
+img.size-5,
+header img,
+a[href*="divedeep"] img {
+  width: 10rem !important;
+  height: auto !important;
+  max-height: 3rem !important;
+  min-width: 10rem !important;
 }
 
-/* Even bigger logo in header */
-header .size-5,
-header img[alt="icon"] {
-  width: 8rem !important;
-  height: 2.5rem !important;
-}
-
-/* Logo container */
-header .size-8 {
+/* Logo container needs to be bigger too */
+.size-8,
+header .size-8,
+header span.size-8 {
   width: auto !important;
-  height: 2.5rem !important;
+  min-width: 10rem !important;
+  height: auto !important;
 }
 
 /* Links */
