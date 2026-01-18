@@ -1,0 +1,26 @@
+site_name: DiveDeep Documentation
+site_url: https://docs.divedeep.io
+site_description: Official documentation for DiveDeep
+
+theme:
+  name: shadcn
+
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Introduction: getting-started/introduction.md
+    - Quick Start: getting-started/quick-start.md
+  - API Reference:
+    - Authentication: api/authentication.md
+    - Endpoints: api/endpoints.md
+  - Guides:
+    - Best Practices: guides/best-practices.md
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - fenced_code
+  - footnotes
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.superfences

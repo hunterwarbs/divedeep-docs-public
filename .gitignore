@@ -4,3 +4,14 @@
 *~
 .idea/
 .vscode/
+
+# MkDocs
+site/
+.cache/
+
+# Python
+__pycache__/
+*.py[cod]
+.env
+venv/
+.venv/
