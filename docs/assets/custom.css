@@ -1,6 +1,8 @@
 /* DiveDeep Brand Theme Override for mkdocs-shadcn */
+/* Force dark mode */
 
-:root {
+html, :root, .dark {
+  color-scheme: dark;
   /* Primary Ocean Waves palette */
   --primary: 187 100% 47%; /* #00DCEF */
   --primary-foreground: 190 97% 8%; /* dark text on primary */
@@ -141,4 +143,40 @@ th {
 /* Selection */
 ::selection {
   background: hsla(187, 100%, 47%, 0.3);
+}
+
+/* Force dark background on all elements */
+html, body {
+  background-color: #011F27 !important;
+  color: #F9FBFB !important;
+}
+
+.dark, [data-theme="dark"] {
+  --background: 190 97% 8%;
+  --foreground: 180 8% 97%;
+}
+
+/* Override any light mode styles */
+main, article, section, div, nav, aside, header, footer {
+  background-color: inherit;
+}
+
+/* Content area */
+.md-content, .content, main {
+  background-color: #011F27 !important;
+}
+
+/* Sidebar */
+.md-sidebar, nav, aside {
+  background-color: #011F27 !important;
+}
+
+/* Header */
+.md-header, header {
+  background-color: #012D37 !important;
+}
+
+/* Cards and surfaces */
+.card, .surface, [class*="card"], [class*="surface"] {
+  background-color: #012D37 !important;
 }
