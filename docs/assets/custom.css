@@ -1,34 +1,37 @@
 /* DiveDeep Brand Theme Override for mkdocs-shadcn */
-/* Force dark mode */
 
-html, :root, .dark {
-  color-scheme: dark;
-  /* Primary Ocean Waves palette */
-  --primary: 187 100% 47%; /* #00DCEF */
-  --primary-foreground: 190 97% 8%; /* dark text on primary */
-  
-  /* Accent Caribbean Waters */
-  --accent: 170 97% 48%; /* #05F2DB */
-  --accent-foreground: 190 97% 8%;
-  
-  /* Dark theme backgrounds */
+/* Dark mode color overrides - target the .dark class */
+.dark {
+  /* Background colors */
   --background: 190 97% 8%; /* #011F27 */
   --foreground: 180 8% 97%; /* #F9FBFB */
   
+  /* Card/surface colors */
   --card: 189 96% 11%; /* #012D37 */
   --card-foreground: 180 8% 97%;
   
   --popover: 189 96% 11%;
   --popover-foreground: 180 8% 97%;
   
-  --muted: 188 56% 22%; /* #1F3537 */
+  /* Muted */
+  --muted: 188 28% 17%; /* darker muted */
   --muted-foreground: 180 8% 67%; /* #9CADAF */
   
+  /* Primary - Ocean Waves cyan */
+  --primary: 187 100% 47%; /* #00DCEF */
+  --primary-foreground: 190 97% 8%;
+  
+  /* Secondary */
   --secondary: 187 100% 32%; /* #008BA1 */
   --secondary-foreground: 180 8% 97%;
   
-  --border: 186 14% 37%; /* #4B6163 */
-  --input: 186 14% 37%;
+  /* Accent - Caribbean Waters teal */
+  --accent: 170 97% 48%; /* #05F2DB */
+  --accent-foreground: 190 97% 8%;
+  
+  /* Borders */
+  --border: 186 14% 30%; /* #4B6163 darker */
+  --input: 186 14% 30%;
   --ring: 187 100% 47%;
   
   /* Sidebar */
@@ -38,145 +41,106 @@ html, :root, .dark {
   --sidebar-primary-foreground: 190 97% 8%;
   --sidebar-accent: 189 96% 11%;
   --sidebar-accent-foreground: 180 8% 97%;
-  --sidebar-border: 186 14% 37%;
+  --sidebar-border: 186 14% 30%;
   --sidebar-ring: 187 100% 47%;
   
-  /* Status colors */
+  /* Surface */
+  --surface: 189 96% 11%;
+  --surface-foreground: 180 8% 97%;
+  
+  /* Destructive */
   --destructive: 345 96% 60%; /* #F93A67 */
   --destructive-foreground: 180 8% 97%;
-  
-  /* Code blocks */
-  --code-background: 189 96% 11%;
-  --code-foreground: 180 8% 97%;
 }
 
-/* Logo in header */
-.md-header__button.md-logo img,
-.md-header__button.md-logo svg {
-  height: 1.5rem;
-  width: auto;
+/* Force background color on body */
+.dark body,
+.dark .bg-background,
+.dark #inner-body {
+  background-color: hsl(190 97% 8%) !important; /* #011F27 */
 }
 
-/* Nav links */
-nav a:hover,
-.md-nav__link:hover {
-  color: hsl(var(--primary)) !important;
+/* Header background */
+.dark header,
+.dark .md-header {
+  background-color: hsl(189 96% 11%) !important; /* #012D37 */
 }
 
-/* Active nav item */
-.md-nav__item--active > .md-nav__link {
-  color: hsl(var(--primary)) !important;
+/* Make the logo bigger */
+.size-5 {
+  width: 2rem !important;
+  height: 2rem !important;
+}
+
+/* Even bigger logo in header */
+header .size-5,
+header img[alt="icon"] {
+  width: 8rem !important;
+  height: 2.5rem !important;
+}
+
+/* Logo container */
+header .size-8 {
+  width: auto !important;
+  height: 2.5rem !important;
 }
 
 /* Links */
-a {
-  color: hsl(var(--primary));
+.dark a {
+  color: hsl(187 100% 47%);
 }
 
-a:hover {
-  color: hsl(var(--accent));
+.dark a:hover {
+  color: hsl(170 97% 48%);
 }
 
-/* Code highlighting */
-code {
-  background: hsl(var(--card));
-  border-radius: 0.25rem;
-  padding: 0.125rem 0.375rem;
+/* Typography links in content */
+.dark .typography a {
+  color: hsl(187 100% 47%);
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-pre code {
-  background: transparent;
-  padding: 0;
+.dark .typography a:hover {
+  color: hsl(170 97% 48%);
 }
 
-/* Admonitions */
-.admonition {
-  border-left-color: hsl(var(--primary)) !important;
+/* Sidebar links */
+.dark [data-sidebar="menu-button"] {
+  color: hsl(180 8% 80%);
 }
 
-.admonition.note {
-  border-left-color: hsl(var(--primary)) !important;
+.dark [data-sidebar="menu-button"]:hover,
+.dark [data-sidebar="menu-button"][data-active="true"] {
+  color: hsl(187 100% 47%) !important;
 }
 
-.admonition.warning {
-  border-left-color: hsl(37 95% 52%) !important; /* warning-500 */
+/* Code blocks */
+.dark pre,
+.dark code {
+  background-color: hsl(189 96% 9%) !important;
 }
 
-.admonition.danger,
-.admonition.error {
-  border-left-color: hsl(var(--destructive)) !important;
-}
-
-.admonition.tip,
-.admonition.success {
-  border-left-color: hsl(122 50% 46%) !important; /* success-500 */
-}
-
-/* Table styling */
-table {
-  border-color: hsl(var(--border));
-}
-
-th {
-  background: hsl(var(--card));
+/* Selection */
+.dark ::selection {
+  background: hsla(187, 100%, 47%, 0.3);
 }
 
 /* Scrollbar */
-::-webkit-scrollbar {
+.dark ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-::-webkit-scrollbar-track {
-  background: hsl(var(--background));
+.dark ::-webkit-scrollbar-track {
+  background: hsl(190 97% 8%);
 }
 
-::-webkit-scrollbar-thumb {
-  background: hsl(var(--border));
+.dark ::-webkit-scrollbar-thumb {
+  background: hsl(186 14% 30%);
   border-radius: 4px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--muted-foreground));
-}
-
-/* Selection */
-::selection {
-  background: hsla(187, 100%, 47%, 0.3);
-}
-
-/* Force dark background on all elements */
-html, body {
-  background-color: #011F27 !important;
-  color: #F9FBFB !important;
-}
-
-.dark, [data-theme="dark"] {
-  --background: 190 97% 8%;
-  --foreground: 180 8% 97%;
-}
-
-/* Override any light mode styles */
-main, article, section, div, nav, aside, header, footer {
-  background-color: inherit;
-}
-
-/* Content area */
-.md-content, .content, main {
-  background-color: #011F27 !important;
-}
-
-/* Sidebar */
-.md-sidebar, nav, aside {
-  background-color: #011F27 !important;
-}
-
-/* Header */
-.md-header, header {
-  background-color: #012D37 !important;
-}
-
-/* Cards and surfaces */
-.card, .surface, [class*="card"], [class*="surface"] {
-  background-color: #012D37 !important;
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: hsl(180 8% 50%);
 }
