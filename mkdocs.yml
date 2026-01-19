@@ -4,10 +4,8 @@ site_description: Official documentation for DiveDeep
 
 theme:
   name: shadcn
-  icon: assets/logo.svg
+  icon: assets/icon.svg
   favicon: assets/favicon.svg
-  palette: dark
-  show_title: false
 
 extra_css:
   - assets/custom.css
