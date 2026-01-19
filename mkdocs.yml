@@ -6,9 +6,7 @@ theme:
   name: shadcn
   icon: assets/icon.svg
   favicon: assets/favicon.svg
-
-extra_css:
-  - assets/custom.css
+  palette: dark
 
 nav:
   - Home: index.md
